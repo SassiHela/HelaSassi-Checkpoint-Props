@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import MyProfile from "./Components/Profile/Profile";
+import ProfileImg from "./Assets/profileImg.jpg";
 
 function App() {
+  const handleName = (e, name) => {
+    e.preventDefault();
+    alert(`Current user : ${name}`);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <MyProfile
+        fullName="Hela Sassi"
+        bio="Graduated from Higher School of Managment - Tunis"
+        profession="Job seeker"
+        handleName={handleName}
+      >
+        {ProfileImg}
+      </MyProfile>
+    </>
   );
 }
-
 export default App;
