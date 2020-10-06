@@ -5,7 +5,7 @@ const MyProfile = (props) => {
   const styleImg = { height: 300 };
   return (
     <div>
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th>#</th>
@@ -17,13 +17,13 @@ const MyProfile = (props) => {
           </tr>
         </thead>
         <tbody>
-          <tr class="table-warning">
+          <tr className="table-warning">
             <th scope="row">1</th>
             <td>{props.fullName}</td>
             <td>{props.bio}</td>
             <td>{props.profession}</td>
             <td>
-              <img src={props.children} style={styleImg} />
+              <img src={props.children} style={styleImg} alt = "profileImg"/>
             </td>
             <td>
               <button
